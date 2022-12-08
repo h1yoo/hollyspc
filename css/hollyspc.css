@@ -1,12 +1,12 @@
 @charset "utf-8";
 
 *   {margin: 0; padding: 0; box-sizing: border-box;}
-html, body  {font: 10pt/180% "Nanum Gothic"; color: #333; background: #f2f2f2;}
+html, body  {font: 10pt/180% "Nanum Gothic"; color: #333; background: #f2f2f2; overflow-x: hidden;}
 a   {color: #333; text-decoration: none;}
 img {display: block; max-width: 100%;}
 
 /*#browser {max-width: 9600px; min-width: 200px;}*/
-#layout {width:100%; max-width: 100vw; margin: auto; background: white;}
+#layout {width:100%; max-width: 100vw; margin: auto; background: white; overflow-x: hidden;}
 
 /*상단 (기업관련 & 로고 & 멤버십관련)*/
 header {height: 100px; width: 1000px;
