@@ -22,33 +22,22 @@ $(document).ready(function(){
     });
 
     //왼쪽방향으로 자동 슬라이드
-    setInterval(slide, 5000);
-    function slide() {  //자동으로 계속 슬라이드 되게 하려면 setInterval(functionName, timeSet) 필수 !!
-        $("#slide").stop().animate({left:"-3700px"}, "slow", function(){  //원래 left:-1630px; 인데 왼쪽으로 1630px 더 이동하니까 -1630px 더하면 -3260px
+	const slide = setInterval(leftMove, 4000 );
+	let j = 0;  //원형불릿 (= 0,1,2)
+	function leftMove(){   //자동으로 계속 슬라이드 되게 하려면 setInterval(functionName, timeSet) 필수 !!
+		j++;
+		if(j == 3) { j=0; }
+        $("#slide").stop().animate({left:"-3700px"}, "slow", function(){  
             $(this).append($(this).children().first());  // #slide의 첫번째자식을 맨뒤로 보낸다
-            $(this).css("left", "-1850px"); //원래 설정으로
+            $(this).css("left", "-1850px"); 
+			$("#circle div").eq(j).addClass("red").siblings().removeClass("red");  //인덱스번호가 j인 #circle의 자손 div에 red라는 클래스를 추가하고 나머지 형제들에 있는 red 클래스 지움
         });
-    }
+	}
 
 
     
     //아래 원형 블릿 클릭하면 클릭한 위치에 맞는 사진 나타내기
     //swatch의 js 참고. (+하고 싶은 것 ==> )
 
-
-    /*//오른쪽버튼 클릭하면, 왼쪽 방향으로 이동
-    $("#right").click(function(){
-        //alert("D");
-        $("#slide").stop().animate({right:0}, "fast", function(){
-            $(this).append($(this).children().first());
-            $(this).css("right", "-160px");        
-        });이건 내가 한 건데 작동되긴 하지만 맞는 코드인지는 모름
-        $("#slide").stop().animate({left:"-320px"},"fast", function(){
-            $(this).append($(this).children().first());
-            $(this).css("left", "-160px");
-            $("#slide img").removeClass("big");
-            $("#slide img").eq(2).addClass("big");
-        });
-    });*/
 
 });  /////END
