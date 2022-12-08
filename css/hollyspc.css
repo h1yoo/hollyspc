@@ -60,7 +60,7 @@ hr {border: none; background: #B5121B; width: 100vw; height: 3px;}
 #slide img {width: 1850px;}
 
 /*슬라이드 밑에 원형 블릿*/
-#circle {bottom: 10px; left: 48%; position: absolute; display: flex;}
+#circle {bottom: 10px; left: 40vw; position: absolute; display: flex;}
 #circle div {border-radius: 50%; width: 10px; height: 10px; background: #E1E1E0; margin: 6px;}
 #circle div.red {background: #A42228;}
 
