@@ -22,7 +22,7 @@ $(document).ready(function(){
     });
 
     //왼쪽방향으로 자동 슬라이드
-    setInterval(slide, 2000);
+    setInterval(slide, 5000);
     function slide() {  //자동으로 계속 슬라이드 되게 하려면 setInterval(functionName, timeSet) 필수 !!
         $("#slide").stop().animate({left:"-3700px"}, "slow", function(){  //원래 left:-1630px; 인데 왼쪽으로 1630px 더 이동하니까 -1630px 더하면 -3260px
             $(this).append($(this).children().first());  // #slide의 첫번째자식을 맨뒤로 보낸다
