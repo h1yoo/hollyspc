@@ -4,18 +4,13 @@ $(document).ready(function(){
 		$(".subMenu, #gray").stop().slideDown();
         $("#gray").stop().slideDown();
         $(this).children("span").removeClass("gray"); //span의 원래 글씨는 하얀색. 서브메뉴 호버되면 메인메뉴 span 회색으로 변하게 함. 
-        $(this).parent().siblings().find("span").addClass("gray");
-		$(".subMenu, #gray").mouseenter(function(){
-			$(this).children("span").removeClass("gray");
-			$(this).parent().siblings().find("span").addClass("gray");
-		});
+        $(this).parent().siblings().children("span").addClass("gray");
 	});
     $(".subMenu, #gray").mouseenter(function(){
         $(".subMenu, #gray").stop().slideDown();
         $(".mainMenu>span").addClass("gray");
         $(".mainMenu").mouseenter(function(){
-            $(this).children("span").removeClass("gray").parent().siblings().find("span").addClass("gray");
-            $(this).children("span").addClass("white");
+            $(this).children("span").removeClass("gray").parent().siblings().children("span").addClass("gray");
         });
     });
     //메뉴에 mouseleave되면 하위메뉴 사라지게 하기
